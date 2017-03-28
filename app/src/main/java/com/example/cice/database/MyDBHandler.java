@@ -80,6 +80,8 @@ public class MyDBHandler extends SQLiteOpenHelper {
         if(cursor.moveToFirst()){
             product.setmId(cursor.getInt(0));
             db.delete(TABLE_PRODUCTS, COLUMN_ID + " = ?", new String[]{ String.valueOf(product.getmId())});
+            cursor.close();
+            result = true;
         }
         db.close();
         return result;
