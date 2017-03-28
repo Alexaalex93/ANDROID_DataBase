@@ -73,7 +73,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public boolean deleteProduct(String productName){
         boolean result = false;
         String query = "Select * FROM " + TABLE_PRODUCTS + " WHERE " +
-                COLUMN_PRODUCT_NAME + " = " + productName +"'";
+                COLUMN_PRODUCT_NAME + " = '" + productName +"'";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         Product product = new Product();
