@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_database"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.cice.database.DatabaseActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="Product ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="No asignado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/productID"
+                android:layout_marginLeft="15dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="Product Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/productName"
+                android:layout_marginLeft="15dp"
+                android:textSize="14sp"
+                android:hint="Name" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="Product Q"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/productQ"
+                android:layout_marginLeft="15dp"
+                android:textSize="14sp"
+                android:hint="Número" />
+
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="añadir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/añadir"
+            android:onClick="addProduct"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Buscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="findProduct"
+            android:id="@+id/buscarBtn"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="eliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="deleteProduct"
+            android:id="@+id/eliminarBtn"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>
